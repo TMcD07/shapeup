@@ -11,7 +11,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100%;
     line-height: 1.3;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     border: 3px solid steelblue;
     box-shadow: 3px 5px 12px 12px grey;
@@ -65,6 +65,7 @@ Nav Menu
     padding: .7em 0;
     font-weight: bold;
     text-decoration: none;
+    transition: all ease-in-out 600ms;
 }
 #nav_menu ul ul {
     display: none;
@@ -86,9 +87,14 @@ Nav Menu
 
 
 
-/****************************************************************  
+/****************************************************************
+*****************************************************************
 Nav List
+*****************************************************************
 *****************************************************************/
+#nav_list {
+    margin-bottom: 20px;
+}
 #nav_list h2 {
     margin: 25px 0;
     text-align: center;
@@ -103,7 +109,7 @@ Nav List
 #nav_list li {
     width: 90%;
     border: 1px solid steelblue;
-    border-radius: 5px;
+    border-radius: 50vw;
 }
 #nav_list a {
     display: block;
@@ -112,26 +118,49 @@ Nav List
     background-color: lightsteelblue;
     padding: 0.5em;
     color: black;
-    border-radius: 5px;
+    border-radius: 50vw;
+    transition: all 600ms;
 }
 #nav_list a:hover {
     background-color: steelblue;
     color: white;
 }
 
+.sidebarimages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.sidebarimages img {
+    max-width: 90%;
+    border: 3px ridge steelblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px grey;
+}
 
 main {
     display: flex;
 }
-section {
+/* section {
     max-width: 70%;
 }
 aside {
     max-width: 30%;
+} */
+section {
+    flex: 0 1 60%;
+}
+aside {
+    flex: 0 1 20%;
 }
 
 h1 {
     margin-left: 3%;
+    text-align: center;
+    font-size: 300%;
+    color: lightsteelblue;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, -1px 1px 2px black, 1px -1px 2px black;
 }
 section p {
     margin: 0 3% 20px;
@@ -144,7 +173,7 @@ blockquote {
     border-radius: 0 10px 10px 0;
 }
 section h2, section h4 {
-    margin: 0 3% 20px;
+    margin: 0 0 20px;
 }
 
 /* aside h2 {
@@ -157,8 +186,40 @@ aside ul {
     line-height: 1.5;
 } */
 
-h4 {
-    font-weight: normal;
+section h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+section h4 a {
+    text-decoration: none;
+    font-size: 130%;
+}
+section h4 a:link, section h4 a:visited {
+    color: black;
+    transition: color 600ms;
+}
+section h4 a:hover {
+    color: blueviolet;
+}
+
+/***********************************************************
+************************************************************  
+Aside Right
+************************************************************
+************************************************************/
+#right h2 {
+    font-size: 120%;
+    text-align: center;
+    margin: 25px 0;
+}
+#right h3 {
+    font-size: 120%;
+}
+#right p {
+    font-size: 90%;
+    margin: 15px 0 25px;
+    padding-right: 10px;
 }
 
 footer {
